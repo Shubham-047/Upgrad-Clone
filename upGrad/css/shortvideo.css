@@ -1,0 +1,486 @@
+body {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  height: 100%;
+  background-color: #f4f5f7;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: normal;
+  font-feature-settings: "liga", "clig";
+  font-variant-ligatures: common-ligatures;
+  color: #1a202c;
+  margin: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#title {
+  padding: 30px 0;
+  background: #071936;
+  color: rgb(255, 255, 255);
+}
+
+#title #logo {
+  color: rgb(233, 84, 84);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+#title div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#title > div {
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 110px;
+}
+#title > div div {
+  margin: -3px 5px;
+  padding: 0px;
+}
+#title > div > div:nth-child(2) {
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 2px solid white;
+  padding-left: 10px;
+}
+#afterTitle {
+  background: #091e42;
+  color: #fff;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 295px;
+}
+
+#interface {
+  position: relative;
+  left: 748px;
+  z-index: 1;
+  /* outline: 1px solid red; */
+  width: auto;
+  height: auto;
+  display: inline;
+  padding: 0px;
+}
+#afterTitle > div:nth-child(2) {
+  height: auto;
+  padding: 0px 1px;
+  position: relative;
+  left: -304px;
+  top: 1px;
+  /* outline: 1px solid red; */
+}
+#afterTitle h1 {
+  font-weight: 700;
+  font-size: 72px;
+  width: 50%;
+  margin: 0px;
+}
+#afterTitle h2 {
+  margin: 0px;
+  margin-top: 117px;
+  font-size: 32px;
+  font-weight: 500;
+}
+#middle {
+  width: 78%;
+  margin: auto;
+  /* outline: 1px solid red; */
+
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 32px 40px;
+}
+#middle > #list {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(9, 30, 66, 0.1);
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 55px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#middle ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  min-width: 700px;
+}
+#middle li {
+  display: inline;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  margin-right: 32px;
+  padding: 14px 0;
+  border-bottom: 4px solid transparent;
+  outline: none;
+  text-transform: capitalize;
+  color: #1a202c;
+  cursor: pointer;
+}
+#middle .selected {
+  color: #f23e36;
+  border-color: #f23e36;
+}
+#middle > #items {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 316px 316px 316px;
+  grid-auto-rows: 250px;
+  grid-column-gap: 54px;
+  grid-row-gap: 45px;
+  transition: transform 0.4s ease-in-out;
+  /* transition: opacity 0.1s; */
+}
+@media only screen and (max-width: 500px) {
+  #middle {
+    width: 98%;
+    padding: 32px 1%;
+    box-sizing: border-box;
+  }
+  #middle > #items {
+    grid-template-columns: 48% 48%;
+    grid-gap: 8px;
+  }
+  .mobileHidden {
+    display: none !important;
+  }
+}
+#items > div {
+  /* outline: 1px solid red; */
+  border-radius: 6px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  transform: translateY(0%) translateZ(0px);
+  box-sizing: border-box;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+}
+#items > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 2px rgb(45 45 45 / 3%), 0 4px 4px rgb(49 49 49 / 3%),
+    0 8px 8px rgb(42 42 42 / 3%), 0 16px 16px rgb(32 32 32 / 3%),
+    0 32px 32px rgb(49 49 49 / 3%), 0 64px 64px rgb(35 35 35 / 3%);
+}
+#items .time {
+  color: #dfe1e6;
+  text-align: end;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+}
+/* #items .videoTitle {
+  margin-bottom: 16px;
+} */
+#items p {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 120%;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+#items h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.views {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+  color: #dfe1e6;
+}
+
+#item1 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/1494092d-ef0c-48f1-af73-ee8992839788-thumbnails-raho-ambitious-4-316x250-brain.png");
+  opacity: 1;
+}
+#item2 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/d08949d8-9b9e-406f-a20e-c0a3081ea744-thumbanils-self-awarness-316x250-diy-skills-.png");
+  opacity: 1;
+}
+#item3 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/5e3bccfa-8308-43b0-aff3-127bae4dd0f8-DIY-Skills-Padhna-zaroori-kyu-hai--316x250.png");
+  opacity: 1;
+}
+#item4 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/dbc27050-cf8c-4eed-963a-2a193ca0975a-thumbnail-9-interview-tips-316x250-.png");
+  opacity: 1;
+}
+#item5 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/56e2b358-9247-4eb2-9c37-e6f1bce52ca9-THUMBNAILS-2-roha-ambitious-316x250-light-bulb-lady.png");
+  opacity: 1;
+}
+#item6 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/78701fd1-13c3-46a8-bacf-df8a4aa596bc-THUMBNAILS-2-roha-ambitious-316X250-BRIYANI-GOOGLE.png");
+  opacity: 1;
+}
+#item7 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/f053712e-3711-4398-a23d-ee4e47b91305-THUMBNAILS-roha-ambitious-befearless-316x250.png");
+  opacity: 1;
+}
+#item8 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/5dc81e2e-2869-49ac-b0d2-302d661eb1bb-thumbanil-10-shot-gyaan-328x200-recapcha.png");
+  opacity: 1;
+  background-size: cover;
+}
+#item9 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/2eb9059c-068a-4464-9edb-cfb281483101-Thumbnail-raho-ambitious-world-316x250.png");
+  opacity: 1;
+}
+#item10 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/692ac619-f2ba-44ff-a6e2-bb246a1ac2ba-thumbanils-12-lady-situation@interview-316x250.png");
+  opacity: 1;
+}
+#item11 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/bd3068bc-5956-44b9-a1ef-189049ae2608-thumbnail-9-shot-gyaan-100-battery-100-percent-.png");
+  opacity: 1;
+}
+#item12 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/d324a5bf-d7e2-454b-8b19-f46d76563726-thumbanils-recurtment-316x250-.png");
+  opacity: 1;
+}
+#item13 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/679cf4e9-4933-40d6-8145-19d685a96be8-THUMBNAILS-2-roha-ambitious-emergency-call-316x250.png");
+  opacity: 1;
+}
+#item14 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("http://127.0.0.1:5500/upGrad/img/shortvideo/item14.png");
+  opacity: 1;
+}
+#item15 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/d1c96b16-ae3e-477a-b362-8cc182cad547-thumbnails-raho-ambitious-5-am-club-316x250.png");
+  opacity: 1;
+}
+#item16 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/d20f28e1-2b94-42fb-b1e1-5799db6a2f57-thumbanils-salary-hike-316x250.png");
+  opacity: 1;
+}
+#item17 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/3a6d9684-4085-4954-afb5-e1e112690a6a-THUMBNAILS-roha-ambitious-chanakya-316x250.png");
+  opacity: 1;
+}
+#item18 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/2e997d5c-8e8a-4e6b-beeb-31f0514fe464-thumbnail-9-Shot-gyaan-5-Skills-jo-aapko-Employable-banayenge-316x250.png");
+  opacity: 1;
+}
+#item19 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/e5195956-3ed7-45db-b3e5-913566d4d929-Situation@Interview-Interview-Crack-karne-ki-Strategy-316x250.png");
+  opacity: 1;
+}
+#item20 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://masterclass-images.s3.amazonaws.com/assets/thumbs/21.png");
+  opacity: 1;
+}
+#item21 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/380452d9-eb37-4c64-9280-0469ef693f95-Row%2017.png");
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#item22 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/daa74573-b4dc-4853-8c2a-f0438407be95-Row%2023.png");
+  opacity: 1;
+}
+#item23 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/6fb46a56-0d20-4a30-bb3a-140050278e2b-Row%2024.png");
+  opacity: 1;
+}
+#item24 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.upgrad.com/200/4a96127b-8829-471c-b6aa-8dff3d1813a7-Row%2025.png");
+  opacity: 1;
+}
+/* @keyframes start {
+  0% {
+    transform: translateY(35px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+} */
+#footer {
+  background: #071936;
+  padding: 35px;
+  color: #7f8a9d;
+  display: flex;
+  justify-content: center;
+}
+#footer > div {
+  display: flex;
+}
+#footer > div > div:nth-child(2) {
+  font-size: 14px;
+  margin-top: 7px;
+  margin-left: 30px;
+}
+#footer #logofooter {
+  color: rgb(233, 84, 84);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+#items .videoTitle video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 7;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+}
+
+.videoTitle video {
+  display: none;
+}
+.play {
+  display: flex !important;
+}
