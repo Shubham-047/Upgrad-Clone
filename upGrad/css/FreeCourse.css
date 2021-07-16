@@ -1404,3 +1404,7 @@ li {
   opacity: 1;
   margin: 21px 113px;
 }
+a{
+  text-decoration: none;
+  color: rgb(83,91,98);
+}
