@@ -27,7 +27,7 @@ Also above footer on the landing page, there is a button named as 'View all free
 
   
 ## 🚀 About Me
-I'm an Aspiring full stack developer. Currently pursuing web development course from the Masai School.
+I'm an Aspiring full stack developer.
 
   
 ## Feedback
